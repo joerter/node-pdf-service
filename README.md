@@ -1,2 +1,2 @@
 # node-pdf-service
-URL :arrow-right: PDF
+URL :arrow_right: PDF
