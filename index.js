@@ -23,37 +23,3 @@ const server = http.createServer( (req, res) => {
 })
 
 server.listen(3000)
-
-// const getUrl = (url, success, fail) => {
-//   http.get(url, (response) => {
-//     const statusCode = response.statusCode
-//     const contentType = response.headers['content-type']
-
-//     let error
-//     if (statusCode !== 200) {
-//       error = new Error(`Request Failed.\n` + `Status Code: ${statusCode}`)
-//       // what does this mean?
-//       response.resume()
-//       fail(error)
-//     } 
-
-//     response.setEncoding('utf8')
-//     let rawData = ''
-//     response.on('data', (chunk) => rawData += chunk)
-//     response.on('end', () => {
-//       try {
-//         const options = { format: 'Letter' }
-//         pdf.create(rawData, options).toFile('./test.pdf', (err, file) => {
-//           if (err) {
-//             fail(err)
-//             return
-//           }
-//           success(file.filename)
-//         })
-//       } catch (e) {
-//         fail(e)
-//       }
-//     })
-//   })
-// }
-//
